@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% comment %} /blogPosts/templates/blogPosts/show.html {% endcomment %}
+
+{% block content %}
+        <div>
+            <a href="{% url 'blogPosts:index' %}">home</a>
+            <h1>{{ post.title }}</h1>
+            <p style="width: 70%;">{{ post.content }}</p>
+            <a href="{% url 'blogPosts:edit' id=post.id %}">edit</a>
+            <a href="{% url 'blogPosts:delete' id=post.id %}">delete</a>
+        </div>
+{% endblock content %}
